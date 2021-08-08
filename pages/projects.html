@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="hu" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Portfólió </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+  </head>
+  <body class="text-secondary bg-light" style="font-size:14px">
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark shadow mb-3">
+
+      <a class="navbar-brand" href="../index.html">Kovács Norbert </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/cv.html">Önéletrajz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/projects.html">Projektek</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container border border pt-2 text-white bg-dark shadow-sm rounded-lg shadow-sm">
+      <h6> Projektek</h6>
+    </div>
+
+    <div class="container bg-white rounded-lg shadow-sm my-3 p-3">
+      <h6> Munkáim </h6>
+      <p>
+        Megpróbálok a projektekhez, egy mélyebb betekintést nyújtani, mit látok hibának, hiányosságnak, vagy előnynek. A projektek között lesznek kivételek is, azonban ezeket tartom talán a legfontosabbnak,
+        mert számomra rendkívül tanulságosak. A projektek többségének az alapja, egy Egyetemi projekt, azonban ezek továbbdolgozásra kerülnek saját felhasználásra.
+      </p>
+    </div>
+
+
+    <div class="my-3 container mx-auto">
+      <div class="row mx-auto" >
+        <div class="col-sm p-3">
+
+          <div class="card text-secondary bg-light shadow-sm" style="width: 100%;">
+            <div class="card-header bg-dark text-white">
+              Elemzés
+            </div>
+            <img class="card-img-top" src="../images/min.png" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title">
+                Dupla minimum keresés
+              </h5>
+              <p class="card-text">
+                Rengetegszer előfordul hogy mások kódjával kell dolgoznom, értelmeznem, és hibát keresnem. Ezért ez a projekt nem egy elkészített feladat,
+                hanem egy teszt. Sokszor segítek másoknak, és amikor felkell mérnem hogy ki milyen szinten van, akkor ezt a feladatot szoktam feladni.
+              </p>
+
+              <!-- <a href="#" class="btn btn-info">Részletek</a> -->
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#minimumsearch">
+                Részletek
+              </button>
+
+
+
+              <!-- The Modal -->
+              <div class="modal fade" id="minimumsearch">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-dark text-white">
+                      <h4 class="modal-title">Dupla minimum keresés</h4>
+                      <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <div class="tab-pane container active pt-3" id="project1">
+                        <h5>A két legkisebb érték</h5>
+                        <p>
+                          Rengetegszer előfordul hogy mások kódjával kell dolgoznom, értelmeznem, és hibát keresnem. Ezért az első projekt nem egy elkészített feladat, hanem egy teszt.
+                          Sokszor segítek másoknak, és amikor felkell mérnem hogy ki milyen szinten van, akkor ezt a feladatot szoktam feladni. Alapvetően, rengeteg dologra rámutat,
+                          és szerintem egész érdekes probléma, abból eredendően, mert kifejezetten egyszerű.
+                        </p>
+
+                        <h6 class="text-danger"> <strong>A feladat:</strong>   </h6>
+                        <code>
+                          Adott egy N elemű lista, egész számokkal. Készítsen egy függvényt, ami a paraméterben kapott listából visszaadja a két legkissebb elemet.
+                        </code>
+                        <br> <br>
+                        <p>
+                          A következő megoldásból egyértelműen látszik, hogy a Python nyelvvel még csak most ismerkedik az illető.
+                          Ezért, fontosnak tartottam, hogy egy alapos elemzést készítsek, és a visszajelzésem ne csak annyiból álljon, hogy a program nem működik.
+                        </p>
+<pre class="border p-3 mt-3 shadow-sm rounded-lg text-secondary">
+1.  import random
+2.  darab=int(input("Hány tagú legyen a tömb?"))
+3.  a=[]
+4.  min2=100
+5.  min1=100
+6.  if darab >2:
+7.    for i in range(0,darab,1):
+8.      a.append(random.randint(1,100))
+9.      min1=min(a)
+10.   for i in range(0,darab,1):
+11.     if a[i] > min1 and a[i] < min2:
+12.       min2 = a[i]
+13.     else:
+14.       pass
+15.   print(a)
+16.   print(min1)
+17.   print(min2)
+18. else:
+19.   print("A tömb nem rendelkezik elég taggal, hogy két minimumot adjon meg")
+</pre>
+
+        <p>
+          A megoldásban több hiba is van, ezek közül van ami jelentéktelenebb, van ami igen súlyos.
+        </p>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-warning">
+               A feladat nincs függvényben.
+               <i class="fas fa-exclamation-triangle close"></i>
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              A megoldás nem álltalános (1 és 100 között) próbálja megoldani a feladatot.
+              <span  class="close"> <i class="fas fa-exclamation-triangle"></i> </span>
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              Még ez esetben sem mindig adja vissza a jó eredményt.
+              <span  class="close"> <i class="fas fa-exclamation-triangle"></i> </span>
+            </li>
+        </ul>
+
+        <h6 class="my-3"> <strong>Probléma részletes szemléltetése</strong></h6>
+        <p>
+          Mielőtt részletesen elemeznénk a feladatot, a nagyon szembetűnő hibákat, javítsuk ki.
+        </p>
+        <pre class="border p-3 mt-3 shadow-sm rounded-lg text-secondary">
+1.  def doubleMinimumSearch(array):
+2.    result = []
+3.    min1 = 100
+4.    min2 = 100
+5.    if(len(array) > 2):
+6.      min1 = min(array)
+7.      for i in range(len(array)):
+8.        if(array[i] > min1 and a[i] < min2):
+9.          min2 = a[i]
+10.       else:
+11.         pass
+12.     print(array)
+13.     result.append(min1)
+14.     result.append(min2)
+15.     return result
+16.   else:
+17.     print("A tömb túl kevés elemet tartalmaz.")
+        </pre>
+        <p>
+          Vegyük alapul, a következő listát, amiben keresni kívánunk: <code>[1,1,3]</code>  <br>
+          Arra számítunk, hogy az algoritmus, az <code>[1,1]</code> listát fogja visszaadni, mivel ez lenne a helyes működés. A relációsjelek használata miatt, a program helytelen működést fog tanusítani.
+        </p>
+        <ul class="list-group">
+          <li class="list-group-item">
+            A <code>min1</code> értéke, a 6. sorban 1 lesz.
+          </li>
+          <li class="list-group-item">
+            A <code>for</code> ciklusban megpróbáljuk megkeresni a második legkisebb elemet. Megnézzük, hogy az aktuális elemnél (<code>array[0] = 1</code>), nagyobb-e mint <code>min1</code>.
+            Mivel az első feltétel hamis, az egész feltétel hamissal zár. (1 nem nagyob mint 1)
+          </li>
+          <li class="list-group-item">
+            A következő lépésben megvizsgáljuk hogy <code>array[1] > min1</code>, ami most is hamis (1 nem nagyobb mint 1), így az és megint hamisként zár.
+          </li>
+          <li class="list-group-item">
+            A következő lépésben megvizsgáljuk hogy <code>array[2] > min1</code>, ami ez esetben igaz lesz (3 nagyobb mint 1), így az és kiértékelése továbblép. <br>
+            Megnézzük hogy <code>array[2] < min2</code> (3 kisebb mint 100), így az és igazként zár. A <code>min2</code> megkapja értéknek a hármat, és az algoritmus a végére ér.
+          </li>
+        </ul>
+        <p class="my-3">Kapott eredmény: <code>[1,3]</code>, ami helytelen! </p>
+        <p>
+          Talán, az első gondolatunk az lenne, hogy <strong>cseréljük ki</strong>, a nagyobb jelet, nagyobb-egyenlő jelre, és a kisebb jelet kisebb-egyenlő jelre.
+          Ezzel ugyan megoldanánk a problémát, hogy amennyiben többször is előfordul a legkisebb elem, megtalálnánk, azonban hibásan működne az algoritmus akkor,
+          ha <strong>nem ismétlődik a minimum érték</strong>. Ha az és-t átírjuk vagy-ra, ugyan ebbe a hibába ütközünk. <br>
+          </i>
+        </p>
+
+        <h6 class="my-3"> <strong>Probléma megoldása</strong> </h6>
+
+        <p>
+          Számos megoldással megoldható a feladat, sok megközelítéssel, különböző hatékonysággal. Én a következőt javasolnám:
+          Egy más módszerrel könnyedén kiküszöbölhető a probléma, akár N számú minimális érték megtalálására is. Hozzunk létre egy jelölő listát. Töltsük fel megfelelő mennyiségű nullával, vagy hamis értékkel. Ezután keressük meg a legkisebb értéket, és annak pozícióját a listában. A megtalált pozíción, a jelölő listában változtassuk
+          át a nullát egyesre, vagy a hamis értéket igazra. Így a következő minimumkeresésnél, egyszerűen csak kihagyhatjuk a már megjelölt indexű elemeket, így sosem választjuk ki kétszer ugyan azt, és semmiféleképpen nem ütközhetünk hibába.
+        </p>
+
+        <p>
+          A memóriaigény, ugyan megduplázódik, de alapvetően egy viszonylag gyors algoritmusról van szó, ami nagyszerűen paramétrezhető.
+        </p>
+
+        <p>
+          Gyakorlatilag ez a minimumkereséses rendezés algoritmusának módosított verziója.
+        </p>
+
+        <p>
+          Természetesen ennél lehet gyorsabb, hatékonyabb módszerrel dolgozni.
+          QuickSort algoritmussal rendezni a listát, és visszaadni az első két indexen található elemet feltételezhetően gyorsabb lenne, de nehezítené az algoritmus értelmezését, kezdő programozóknak.
+          </i>
+        </p>
+
+        <pre class="border p-3 mt-3 shadow-sm rounded-lg text-secondary">
+1.  import math
+2.  def MinimumSearchForN(Data, N):
+3.    Result = []
+4.    Marks = []
+5.    i = 0
+6.    while(i < len(Data)):
+7.      Marks.append (0)
+8.      i += 1
+9.    MinValue = math.inf
+10.   MinValuePos = 0
+11.   i = 0
+12.   while(i < N):
+13.     j = 0
+14.     while(j < len(Data)):
+15.       if(Data[j] < MinValue and Marks[j] != 1):
+16.         MinValue = Data [j]
+17.         MinValuePos = j
+18.       j += 1
+19.     Result.append(MinValue)
+20.     Marks[MinValuePos] = 1
+21.     MinValue = math.inf
+22.     MinValuePos = 0
+23.     i += 1
+24.   return Result
+        </pre>
+
+        <h6> <strong>Összegzés</strong> </h6>
+        <p>
+          Összességében, egy nehezen észrevehető hibát tartalmazott a beküldött megoldás, ami sokszor a tesztek során nem fog előbukkanni. Az álltalam nyújtott megoldás messze nem tökéletes, de a feladatot, a követelmények szerint
+          elvégzi. Egy ilyen egyszerű feladatnál is fontos hogy szemügyre vegyünk minden lehetséges problémát, főleg, hogy ha ezt az algoritmust, később, valami komplikáltabb feladat alapjaként használjuk akkor kifejezetten
+          nehéz lesz megtalálni a probléma forrását.
+        </p>
+
+        </div>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm p-3">
+          <div class="card text-secondary bg-light shadow-sm" style="width: 100%;">
+            <div class="card-header bg-dark text-white">
+              Automatizálás
+            </div>
+            <img class="card-img-top" src="../images/timetable.png" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title">
+                Órarend elemzés
+              </h5>
+              <p class="card-text">
+                A szakkollégiumban is hétköznapi probléma, a tagok idejének összeeggyeztetése, ráadásul mindenki beosztása félévenként változik. Ezért, megpróbáltam
+                egy megoldást nyújtani a problémára, amivel az eggyeztetést felgyorsíthatjuk.
+              </p>
+
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#timetable">
+                Részletek
+              </button>
+              <a href="https://github.com/Gellifree/CTable" target="_blank" class="btn btn-outline-info float-right">Github</a>
+
+              <!-- The Modal -->
+              <div class="modal fade" id="timetable">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-dark text-white">
+                      <h4 class="modal-title">Órarend elemzés</h4>
+                      <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h5>Összefoglaló</h5>
+                      <p>
+                        Az órarend elemző alkalmazás Github oldalán, részletes dokumentáció található a program működésével kapcsolatban. Egy konzolos alkalmazásként készítettem el, Python nyelven.
+                        Elsősorban a fejlesztés gyorsasága miatt választottam a Python nyelvet. A probléma valódi alkalmazása során, egy webalkalmazást látnék alkalmasnak (Codeigniter keretrendszer), hogy minden tag könnyedén használhassa.
+                      </p>
+                      <p>
+                        Ezenkívül a gyakorlatias megvalósításban szükségszerűnek érzem, hogy pontosabb időkerettel dolgozzon az alkalmazás. Jelenleg egy leegyszerűsített módszert alkalmaz, ami miatt csökken a használhatósága.
+                      </p>
+                      <p>
+                        Ez a program volt, az első kicsit komplexebb projektem, és úgy érzem, hogy látszik is rajta. Ettől függetlenül fontos projektnek tartom, mert rengeteget tanultam a készítése során.
+                      </p>
+                      <p>
+                        Amennyiben a szabadidőm engedi, mindenképpen szeretnék egy működő webalkalmazást készíteni a projektből, ezzel tovább segítve a szakkollégiumot a jövőbeli működésében.
+                      </p>
+                      <h6>Képernyőképek</h6>
+                      <p class="text-center">
+                        Bejelentkezés
+                      </p>
+                      <img src="../images/ctable.png" class="img-fluid" alt="">
+                      <p class="text-center">
+                        Hét táblázat megtekintése
+                      </p>
+                      <img src="../images/ctable-2.png" class="img-fluid" alt="">
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <a href="https://github.com/Gellifree/CTable" target="_blank" class="btn btn-outline-info float-right">Github</a>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm p-3">
+          <div class="card text-secondary bg-light shadow-sm" style="width: 100%;">
+            <div class="card-header bg-dark text-white">
+              Automatizálás
+            </div>
+            <img class="card-img-top" src="../images/binary.png" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title">
+                Számrendszerek kezelése
+              </h5>
+              <p class="card-text">
+                Sokszor nagy segítséget nyújt, ha nem manuálisan kell a számrendszerek közötti átváltást elvégezni. Erre az alapvető egyszerű feladatra készült ez a Python
+                script, hogy meggyorsítsa az ehhez kapcsolódó feladatok megoldását.
+              </p>
+
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#binop">
+                Részletek
+              </button>
+              <a href="https://github.com/Gellifree/BinOp" target="_blank" class="btn btn-outline-info float-right">Github</a>
+              <!-- The Modal -->
+              <div class="modal fade" id="binop">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-dark text-white">
+                      <h4 class="modal-title">Számrendszerek</h4>
+                      <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h5>Összefoglaló</h5>
+                      <p>
+                        A progam elsődleges célja, a számrendszerek közötti átváltás volt. A projekt github oldalán részletes dokumentáció található.
+                        A projektet, csapatban kezdtük el fejleszteni, azonban a feladat lejártával, saját célokra, azt tovább fejlesztettem.
+                      </p>
+                      <p>
+                        A programot szánt szándékkal konzolos alkalmazásként terveztük. A kezdeti funckcionalitás idővel bővült és már nem csak a számrenszerek átváltása volt a fő cél.
+                        Bizonyos bináris műveletek megjelentek, azonban még sokmindennel kellene bővíteni. A kettes számrendszerben való összeadás megvalósítása a jelenlegi cél.
+                        Egy egyszerű összeadási funkció ugyan elkészült, azt nem éreztem elég jónak ahoz, hogy arra építsünk jövöbeli funkciókat. Az összeadás, csak két bináris szám összeadására volt alkalmas,
+                        ami hosszútávon nem célravezető. A bináris kivonás, vagy szorzás érdekében olyan összeadásért felelős függvényre van szükség, ami bármennyi mennyiségű bináris számot összetud adni.
+                      </p>
+                      <p>
+                        Ennek a végleges megvalósítása majdnem elkészült, azonban a határidő lejárta miatt, be kellett fejezni a program más funkcióit, így ezek a műveletek nem kerültek bele, az "átadásra" kerülő programba.
+                        Újradolgozásra került a feladatgenerálás, és a program végső célja is. A jövőben, szeretném majd vefejezni a félbehagyott funkciókat, hogy egy széles körben használható konzolos alkalmazás birtokában legyek, ami megkönnyít, minden bináris műveleteket érintő feladatokat.
+                      </p>
+                      <h6>Képernyőképek</h6>
+                      <p class="text-center">
+                        Főmenü
+                      </p>
+                      <img src="../images/binop.png" class="img-fluid" alt="">
+                      <p class="text-center">
+                        Számítási eredmények
+                      </p>
+                      <img src="../images/binop-2.png" class="img-fluid" alt="">
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <a href="https://github.com/Gellifree/BinOp" target="_blank" class="btn btn-outline-info float-right">Github</a>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row mx-auto">
+
+        <div class="col-sm p-3">
+          <div class="card text-secondary bg-light shadow-sm" style="width: 100%;">
+            <div class="card-header bg-dark text-white">
+              Backend
+            </div>
+            <img class="card-img-top" src="../images/bluepaw.png" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title">
+                Kék Mancs szervezet
+              </h5>
+              <p class="card-text">
+                Egy fiktív szervezet számára készült nyilvántartó web alkalmazás.
+              </p>
+
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#bluepaw">
+                Részletek
+              </button>
+              <a href="https://github.com/Gellifree/bluepaw" target="_blank" class="btn btn-outline-info float-right">Github</a>
+              <!-- The Modal -->
+              <div class="modal fade" id="bluepaw">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-dark text-white">
+                      <h4 class="modal-title">Kék Mancs</h4>
+                      <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h5>Összefoglaló</h5>
+                      <p>
+                        Az első projektem, amit Codeigniter keretrendszer használatával készítettem el. A projekt, egy fiktív szervezet számára készülő, nyilvántartó webalkalmazás. Részletes dokumentáció megtalálható a Github oldalon.
+                      </p>
+                      <p>
+                        A projekt az eddigi legtöbb időt magába foglaló feladatom volt ami közel három hetet jelent. Ez részben a keretrendszer ismeretének hiánya okozta.
+                      </p>
+                      <p>
+                        A weboldalon található grafikákat én készítettem. Itt használtam először a bootstrap keretrendszert is. A projekt elkészítése elég ismeretet adott ahoz, hogy a szakdolgozatomat is ezzel a technológiával készítsem el, egy valódi probléma kapcsán.
+                      </p>
+                      <p>
+                        A github linken található számos képernyőkép a tényleges webapplikációról.
+                      </p>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <a href="https://github.com/Gellifree/bluepaw" target="_blank" class="btn btn-outline-info float-right">Github</a>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm p-3">
+          <div class="card text-secondary bg-light shadow-sm" style="width: 100%;">
+            <div class="card-header bg-dark text-white">
+              Játékfejlesztés
+            </div>
+            <img class="card-img-top" src="../images/godot.png" alt="Card image">
+            <div class="card-body ">
+              <h5 class="card-title">
+                Aknakereső
+              </h5>
+              <p class="card-text">
+                Mindenki álltal jól ismert aknakereső, Godot játékmotorban elkészítve, újrarajzolva.
+              </p>
+
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#minesweeper">
+                Részletek
+              </button>
+              <a href="https://github.com/Gellifree/DigItAround" target="_blank" class="btn btn-outline-info float-right">Github</a>
+              <!-- The Modal -->
+              <div class="modal fade" id="minesweeper">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-dark text-white">
+                      <h4 class="modal-title">Aknakereső</h4>
+                      <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h5>Összefoglaló</h5>
+                      <p>
+                        Ez a projekt, az első komolyabb projektem a Godot játékmotorban. Több kisebb projektem is volt,
+                        de ennek a projektnek a célja az volt, hogy egy teljesen működöképes, összességében késznek tekinthető játékot készítsek.
+                      </p>
+                      <p>
+                        Mindenféleképpen egy egyszerű, mindenki számára ismerős játékot akartam készíteni. Nem mondanám az aknakereső működését komplikáltnak, de a rekurzív algoritmussal több időt töltöttem a kelleténél.
+                        A játékban használt grafikákat, pixelartokat én készítettem. A különféle vektorgrafikus rajzok, és pixelartok, vag rajzok készítése a hobbijaim közé tartozik, de kifejezetten neház feladat volt, egy egységes hangulatú
+                        anyagot elkészíteni a játékhoz.
+                      </p>
+                      <p class="text-center">
+                        Godot játékmotor
+                      </p>
+                      <img src="../images/digitaround-2.png" class="img-fluid" alt="">
+                      <p class="text-center">
+                        Játékmenet
+                      </p>
+                      <img src="../images/digitaround.png" class="img-fluid" alt="">
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <a href="https://github.com/Gellifree/DigItAround" target="_blank" class="btn btn-outline-info float-right">Github</a>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm p-3">
+          <div class="card text-secondary bg-light shadow-sm" style="width: 100%;">
+            <div class="card-header bg-dark text-light">
+              Frontend
+            </div>
+            <img class="card-img-top" src="../images/portfolio.png" alt="Card image">
+            <div class="card-body ">
+              <h5 class="card-title">
+                Portfólió oldal
+              </h5>
+              <p class="card-text">
+                Az itt látható portfólió oldal.
+              </p>
+
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#portfolio">
+                Részletek
+              </button>
+              <a href="https://github.com/Gellifree/Portfolio" target="_blank" class="btn btn-outline-info float-right">Github</a>
+              <!-- The Modal -->
+              <div class="modal fade" id="portfolio">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-dark text-white">
+                      <h4 class="modal-title">Portfólió</h4>
+                      <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h5>Összefoglaló</h5>
+                      <p>
+                        Sok statikus weboldalt készítettem már, apróbb, kisebb projektekhez. A portfólió oldalamat saját magam terveztem, próbáltam nem egy meglévő design-t lemásolni.
+                        A bootstrap beépített színei köré próbáltam építeni a weboldal kinézetét, és ez alapján készítetem vektorgrafikus képeket minden projekthez.
+                      </p>
+                      <p>
+                        Szerettem volna, hogy ha egy alapos bemutatkozás során, le írhatnám, hogy ki vagyok, és mik számomra a legfontosabb mérföldkövek. Ezenkívül egy egyszerű listát arról, hogy milyen képességekkel rendelkezek, egy lényegre törő leírással.
+                      </p>
+                      <p>
+                        Fontosnak tartottam, hogy a weboldalon elérhető legyen az önéletrajzom egy leegyszerűsített változata, amit gyorsan áttekintve, képet kaphatunk rólam.
+                      </p>
+                      <p>
+                        A projektjeim résznél szeretném bemutatni hogy a jelenlegi tudásommal mikre voltam képes. Hazudnék ha azt mondanám, hogy minden projektemmel elégedett vagyok. Utólag visszanézve, azt látom, hogy rengeteg mindent csinálhattam volna jobban, vagy máshogy.
+                        De ezek a projektek foglalják össze eddigi képességeimet a legjobban.
+                      </p>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <a href="https://github.com/Gellifree/Portfolio" target="_blank" class="btn btn-outline-info float-right">Github</a>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Bezárás</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+  </body>
+</html>
